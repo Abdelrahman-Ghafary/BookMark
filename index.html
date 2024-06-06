@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMark</title>
+    <!-- Header Icon -->
+    <link rel="icon" href="img/bookmark.png" type="image/icon type">
+    <!-- Font Awesome Style -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Bootstrap Style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="css/Pacifico-Regular.ttf">
+    <!-- Style  -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <div class="home">
+       
+        <div class="container ">
+            <header class="text-center my-5 py-3">
+                <h1 class="py-5">Bookmarker</h1>
+            
+                <div class="supTitle d-flex  justify-content-center align-items-center">
+                    <i class="fs-2 fa-solid fa-bookmark px-2"></i>
+                    <h3 class="py-4 px-2">Bookmark your favorite sites</h3><i
+                        class="fs-2 px-2 fa-solid fa-bookmark"></i>
+                </div>
+            </header>
+            <div class="formInput my-5">
+               
+                <div class="my-5">
+                    <label for="siteName" class="fw-bolder form-label"> <i class="fa-solid fa-book-bookmark px-2"></i>Site Name</label>
+                <input type="text" id="siteName" oninput="validateInput();" class="form-control is-invalid " placeholder="Bookmark Name">
+                <div id="alertSiteName" class="alert d-none alert-danger" role="alert">
+                   The Site Name Must be 3 Digit Or More
+                  </div>
+                </div>
+                  
+                
+                <div>
+                    <label for="webSite" class="fw-bolder form-label "> <i class="fa-solid fa-link px-2"></i>Website Url</label>
+                <input type="text" oninput="validateInput();" id="webSite" class="form-control is-invalid" placeholder="Website Url ">
+                <div id="alertSiteUrl" class="alert  d-none alert-danger" role="alert">
+                    The Web Site  Must be Valid Url Like "www.test.com"
+                  </div>
+                </div>
+                  
+               <div class="text-center">
+                <button id="Submit"  onclick="addWebSite();" class=" btn btn-danger my-5 px-4 py-2">Submit</button>
+               </div>
+            </div>
+
+            <table class="table text-center shadow rounded">
+                <thead>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="tbody">
+                    
+                </tbody>
+            </table>
+        </div>
+       
+    </div>
+
+<div id="overlay" class="overlay d-none w-100 d-flex align-content-center align-items-center justify-content-center vh-100 position-absolute top-0 start-0 end-0 bottom-0">
+    <!-- Button trigger modal -->
+
+  <div class="bg-white position-relative vh-75  p-5 my-5 d-flex flex-column justify-content-center align-content-center  rounded shadow">
+    <i  id="closeBtn" class=" close fa-regular position-absolute top-0 end-0 fa-circle-xmark"></i>
+<h3 class="h4">Site Name or Url is not valid, Please follow the rules below :</h3>
+<div class="d-flex flex-column  ">
+    <div class="modIco d-flex align-content-center align-items-center ">
+        <i class="fa-regular fa-circle-right px-2"></i>
+        <p class="py-2">Site name must contain at least 3 characters</p>
+    </div>
+<div class="modIco d-flex align-content-center align-items-center">
+    <i class="fa-regular fa-circle-right px-2"></i>
+    <p class="py-2">Site URL must be a valid one</p>
+</div>
+</div>
+  </div>
+</div>
+
+
+    <!-- Bootstrap Js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Mine Js -->
+
+    <script src="js/mine.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+*::selection
+{
+    background-color: #ffc107;
+}
+body
+{
+    background-color: #f7ecde;
+}
+
+h1 {
+    font-family: "Pacifico", cursive;
+    font-weight: 900;
+    font-style: normal;
+   
+  }
+
+  .supTitle
+  {
+    background: linear-gradient(#3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+   
+   
+  }
+  header h1 
+  {
+ border-bottom: dotted 2px black;
+  }
+
+.formInput
+{
+    border-bottom: dotted 2px black;
+  
+}
+
+.overlay
+{
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.modIco i 
+{
+  color: rgb(175, 9, 9);
+  font-size: 22px;
+}
+
+.close
+{
+  font-size: 28px;
+  padding: 5px;
+  cursor: pointer;
+}
